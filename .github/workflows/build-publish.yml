@@ -26,7 +26,7 @@ jobs:
               id: setup-cli
               env:
                 JF_URL: https://${{ secrets.JF_URL }}/
-                JF_PROJECT: 'prakriti-project'
+                # JF_PROJECT: 'prakriti-project'
               with:
                   oidc-provider-name: prakriti 
                   oidc-audience: prakriti-test-github
