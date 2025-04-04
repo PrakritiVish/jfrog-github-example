@@ -104,7 +104,7 @@ jobs:
               run: |
                 jf rt build-publish
 
-            - name: build scan
-              run: |            
-                jf build-scan
+            # - name: build scan
+            #   run: |            
+            #     jf build-scan
 
