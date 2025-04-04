@@ -94,7 +94,9 @@ jobs:
             - name: docker scan
               run: |  
                  jf docker pull ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} 
-                 jf docker push ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} $DOCKER_REPO 
+
+                 docker tag ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} 
+                 docker push hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}
                  jf docker scan ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}                   
 
             - name: publish build info
