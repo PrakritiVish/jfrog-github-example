@@ -97,7 +97,7 @@ jobs:
 
                  jf docker tag ${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} 
                  # jf docker push hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}
-                 jf dp hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} prakriti-docker
+                 jf rt dp hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }} prakriti-docker
                  jf docker scan hts2-prakriti-docker.jfrog.io/${{secrets.REGISTRY}}/${{ env.IMAGE_NAME }}                
 
             - name: publish build info
